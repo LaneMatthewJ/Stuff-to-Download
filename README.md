@@ -14,3 +14,4 @@ Installing All the cool stuff:
 4. Install NetBeans: https://netbeans.org/downloads/
    
    
+5. Git: https://git-scm.com/download/
