@@ -1,22 +1,3 @@
-# Stuff-to-Download
-stuff
-
-
-Installing All the cool stuff:
-
-1. Install JDK: 
-   - 9:: http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html
-
-2. Install Xampp: https://www.apachefriends.org/index.html
-
-3. Install MySQL workbench: https://dev.mysql.com/downloads/windows/installer/
-
-4. Install NetBeans: https://netbeans.org/downloads/
-   
-   
-5. Git: https://git-scm.com/download/
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -24,18 +5,52 @@ Installing All the cool stuff:
  */
 package javaapplication2;
 
+class Job {
+    int salary;
+    double otherThings; 
+    String jobTitle; 
+    
+    Job(){
+        salary = 100000;
+        jobTitle = "ultra cool job that pays really well"; 
+    }
+    
+    Job(int salary){
+        this.salary = salary;
+    }
+    
+    int getSalary(){
+        return salary; 
+    }
+    
+    void setSalary(int s){
+        salary = s;
+    }
+    
+}
+
+
+
 
 class Principal {
     String punishmentType; 
     
-    Principal(){
+    Principal(){                            // construcor that gets called when "new principal" is called
         punishmentType = "paddle";
     }
     
     Principal( String punIshment ){
-        
+        punishmentType = punIshment; 
     }
-}
+    
+    String getPunishment(){                 // not construcor - gets called when we call it
+        return punishmentType; 
+    }
+    
+    void setPunishment(String type){
+        punishmentType = type; 
+    }
+ }
 
 
 
@@ -43,7 +58,7 @@ class Teacher {
     
         private String subject;
         
-        Teacher(){
+        Teacher(){ // construcor that gets called when "new teacher" is called
             System.out.println("Oh hey class, I'm a teacher");
             subject = "math"; 
         }
@@ -53,7 +68,7 @@ class Teacher {
             this.subject = ultraCoolSubject; 
         }
         
-        String getSubject(){
+        String getSubject(){  // not construcor - gets called when we call it
             return subject; 
         }
         
@@ -74,7 +89,6 @@ public class JavaApplication2 {
 
     public static void main(String[] args) {
          
-        
         String otherThing = "RAD DAD";
         saySomething(otherThing); 
         
@@ -85,6 +99,8 @@ public class JavaApplication2 {
         Teacher theCoop = new Teacher("CS (Way cooler than that Matt guy amirite)");
         
         System.out.println( "WHAT DOES THE TEACHER TEACH? " + theCoop.getSubject() );
+        
+        
         
     }
 }
